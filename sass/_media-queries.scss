@@ -1,0 +1,236 @@
+@media only screen and (min-width:600px) and (max-width:1023px) {
+    /*INDEX*/
+    .nav-item {
+        font-size: 20px;
+    }
+    /*CONTENIDO INDEX*/
+    .nuestra {
+        font-size: 70px;
+    }
+    .subTitulo {
+        font-size: 30px;
+    }
+    .imgIndex {
+        height: 430px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .imgIndex img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .h5 {
+        font-size: 29px;
+    }
+    .textoImagen {
+        width: 300px;
+        font-size: 15px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+    }
+    .div {
+        background-color: hsl(317, 47%, 97%);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .imgValores img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .textValores {
+        text-align: center;
+        font-size: 32px;
+    }
+    /*CONTACTANOS*/
+    fieldset {
+        width: 74%;
+    }
+    input {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    textarea {
+        width: 400px;
+        height: 300px;
+    }
+    .boton {
+        font-size: 30px;
+    }
+    /*NOSOTROS*/
+    .nosotrosTitulo {
+        font-size: 70px;
+    }
+    .contenidoNosotros {
+        width: 85%;
+        padding: 20px;
+    }
+    .frase {
+        font-size: 60px;
+    }
+    /*PRODUCTOS*/
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /*RECETAS*/
+    .h1Recetas {
+        font-size: 60px;
+    }
+    .caja img {
+        width: 400px;
+    }
+    /*FOOTER*/
+    .derechos h4 {
+        display: flex;
+        justify-content: center;
+    }
+    .derechos h4 {
+        font-size: medium;
+    }
+}
+
+@media (min-width:1024px) {
+    /*  INDEX */
+    .header {
+        height: 150px;
+    }
+    .nav-item {
+        font-size: 25px;
+    }
+    /*CONTENIDO INDEX*/
+    .nuestra {
+        font-size: 100px;
+    }
+    .titulo {
+        font-size: 100px;
+    }
+    .subTitulo {
+        font-size: 34px;
+    }
+    .imgIndex {
+        height: 515px;
+    }
+    .imgIndex img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .h5 {
+        font-size: 35px;
+    }
+    .textoImagen {
+        width: 300px;
+        font-size: 18px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+    }
+    .div {
+        background-color: hsl(317, 47%, 97%);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .imgValores img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .textValores {
+        text-align: center;
+        font-size: 40px;
+    }
+    /* CONTACTANOS*/
+    h2 {
+        font-size: 30px;
+    }
+    fieldset {
+        width: 40%;
+    }
+    /*NOSOTROS */
+    .imgNosotros {
+        display: inline;
+    }
+    .contenidoNosotros {
+        text-align: center;
+        font-size: 25px;
+        border: 1px solid black;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 15px 100px 15px;
+    }
+    .divNosotros {
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .divNosotros img {
+        width: 500px;
+        height: 699px;
+    }
+    .nosotrosTitulo {
+        font-size: 80px;
+    }
+    .frase {
+        font-size: 70px;
+    }
+    /*CONTACTANOS*/
+    input {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    textarea {
+        width: 400px;
+        height: 300px;
+    }
+    .boton {
+        font-size: 30px;
+    }
+    /*RECETAS*/
+    .h1Recetas {
+        font-size: 80px;
+    }
+    h4 {
+        font-size: 50px;
+    }
+    .caja h4 {
+        margin-top: 20px;
+    }
+    .caja img {
+        width: 700px;
+    }
+    .w-100 {
+        height: 680px;
+        margin: auto;
+    }
+    /* PRODUCTOS*/
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /*FOOTER*/
+    .derechos h4 {
+        display: flex;
+        justify-content: center;
+    }
+    .derechos h4 {
+        font-size: large;
+    }
+}

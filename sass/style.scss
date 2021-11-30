@@ -1,0 +1,183 @@
+@import "colores";
+
+/* ESTILOS GENERALES*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    color: $colorUno;
+    background-color: hsl(317, 47%, 97%);
+}
+
+
+/* INDEX */
+
+
+/*BARRA DE NAV*/
+
+.header {
+    background-color: $colorDos;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/pexels-neosiam-592392.jpg");
+}
+
+.nav-item {
+    font-size: 15px;
+    margin: 0px 20px;
+}
+
+.nav-link:hover {
+    color: #91a5c7 !important;
+}
+
+.link {
+    text-decoration: none;
+    color: $colorUno;
+}
+
+.link:hover {
+    color: #FFE2E2;
+}
+
+
+/*CONTENIDO INDEX*/
+
+.nuestra {
+    font-family: 'Birthstone';
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.subTitulo {
+    font-size: 17px;
+    display: inline-block;
+    position: relative;
+}
+
+.subTitulo::after,
+.subTitulo::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+}
+
+.subTitulo::before {
+    left: -320px;
+}
+
+.subTitulo::after {
+    right: -320px;
+}
+
+.imgIndex {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgIndex img {
+    width: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+}
+
+.imgValores {
+    margin-top: 17px;
+}
+
+.textoImagen {
+    text-align: center;
+    display: inline-block;
+    margin: 0px 2px 16px 2px;
+    font-size: 13px;
+}
+
+.h5 {
+    font-family: 'Birthstone';
+    margin: 10px 0px;
+    font-weight: 600;
+}
+
+.div {
+    display: flex;
+    background-color: $colorTres;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imgValores img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.textValores {
+    text-align: center;
+    font-size: 17px;
+    margin: 11px;
+    font-family: 'Birthstone';
+    font-weight: 600;
+}
+
+.volver {
+    text-align: right;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: $colorCuadro;
+    padding: 2rem 1rem;
+}
+
+i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.row {
+    justify-content: center
+}
+
+.iconos {
+    margin-top: 10px;
+}
+
+.derechos {
+    padding-top: 10px;
+    border-top: solid 1px black;
+}
+
+.derechos h4 {
+    font-size: small;
+    text-align: center;
+}
+
+@import "nosotros";
+@import "recetas";
+@import "contactanos";
+@import "productos";
+@import "media-queries";

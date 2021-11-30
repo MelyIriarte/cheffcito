@@ -1,0 +1,48 @@
+/* CONTACTANOS*/
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 20px 10px;
+    font-family: 'Birthstone', cursive;
+    text-align: center;
+}
+
+fieldset {
+    background-color: #ffe2e293;
+    border: 1px solid #ffe2e293;
+    border-style: revert;
+}
+
+fieldset {
+    height: 100%;
+    width: 80%;
+}
+
+input {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Birthstone', cursive;
+}
+
+.formulario {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    border-color: #B9CCED;
+    background-color: #B9CCED;
+    border-radius: 0.2rem;
+    font-size: 1 rem;
+    margin-bottom: 10px;
+    transition: ease 3s;
+    font-family: 'Birthstone', cursive
+}
+
+#li {
+    padding-left: 10px;
+}

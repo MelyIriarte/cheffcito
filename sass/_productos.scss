@@ -1,0 +1,83 @@
+/*  PRODUCTOS*/
+
+.buscar {
+    position: absolute;
+    width: 100px;
+    left: 85%;
+    top: 4%;
+}
+
+.box {
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input.src {
+    padding: 3px 7px 3px 30px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 17px;
+    color: $colorUno;
+    margin: 5px 9px;
+    background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") no-repeat 9px center;
+    width: 96px;
+    transition: all .5s;
+}
+
+input.src:hover {
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0 0 5px;
+}
+
+.volver {
+    text-decoration: none;
+    text-align: right;
+}
+
+.sectionProductos {
+    display: grid;
+}
+
+.articleProductos h5 {
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.articleProductos img {
+    margin: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2em;
+    margin: 2em;
+}
+
+.articleProductos {
+    padding: 1px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    transition: ease .5s;
+}
+
+.articleProductos:hover {
+    border: transparent solid 1px;
+    transform: scale(1.05);
+}
+
+.carrito {
+    background-color: #B9CCED;
+    border-radius: 3px;
+    border: solid #B9CCED;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
