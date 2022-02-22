@@ -1,19 +1,3 @@
-/* let brownie = "Brownie";
-let browniePrecio = 2000;
-let brownieStock = 10;
-
-let cheescake = "Cheescake";
-let cheescakePrecio = 3000;
-let cheescakeStock = 5;
-
-let rogel = "Rogel";
-let rogelPrecio = 2200;
-let rogelStock = 3;
-
-let lemonpie = "Lemonpie";
-let lemonpiePrecio = 1500;
-let lemonpieStock = 6;
- */
 class Productos {
     constructor(nombre, precio, stock) {
         this.nombre = nombre;
@@ -25,18 +9,28 @@ class Productos {
         console.log(this.nombre + "\nSTOCK: " + this.stock);
     }
 }
+let listaProductosMenu = "Nuestras tortas son:";
+let contador = 0;
+let cantidadComprada;
+let total = 0;
+
 const brownie = new Productos("brownie", 2000, 10);
 const cheescake = new Productos("cheescake", 3000, 5);
 const rogel = new Productos("rogel", 2200, 3);
 const lemonpie = new Productos("lemonpie", 1500, 6);
 
-alert("Nuestras tortas son:" + "\n" + brownie.nombre + "\n" + cheescake.nombre + "\n" + rogel.nombre + "\n" + lemonpie.nombre);
+const listadoProductos = [brownie, cheescake, rogel, lemonpie];
 
-let cantidadComprada;
-let total = 0;
+listadoProductos.push(new Productos("milhojas", 2000, 2));
 
-function stockInsuficiente(stock) {
-    alert("no tenemos suficiente stock de " + stock);
+for (producto of listadoProductos) {
+    contador++;
+    listaProductosMenu += "\n" + contador + "- " + producto.nombre;
+}
+alert(listaProductosMenu);
+
+function stockInsuficiente(producto) {
+    alert("no tenemos suficiente stock de " + producto);
 }
 
 function compra(producto) {
@@ -49,7 +43,7 @@ function compra(producto) {
         total += producto.precio * cantidadComprada;
 
     } else {
-        stockInsuficiente(stock);
+        stockInsuficiente(producto.nombre);
     }
 }
 
@@ -68,6 +62,8 @@ for (let i = 0; i = isNaN(cantidadComprada); i++) {
             compra(rogel);
         } else if (productoAcomprar == lemonpie.nombre) {
             compra(lemonpie);
+        } else if (productoAcomprar == listadoProductos[4].nombre) {
+            compra(listadoProductos[4]);
         } else {
             alert("No tenemos ese producto");
         }
