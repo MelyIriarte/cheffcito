@@ -71,5 +71,4 @@ for (let i = 0; i < cantidadProductos; i++) {
     } else { alert("No tenemos ese producto"); }
 
 }
-
 alert("Usted tiene que pagar $" + total);
