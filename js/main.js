@@ -26,7 +26,7 @@ const cheescake = new Productos("cheescake", 3000, 5, " Base de galletitas tritu
 
 const rogel = new Productos("rogel", 2200, 3, " Masas fina de galeta muy crocante intercaladas con dulce de leche terminada con pico altos de meregue Italiano.", "tortas", "../img/rogel-min.png");
 
-const lemonpie = new Productos("lemonpie", 2500, 6, "Base de una masa fina  rellena de una crema de limon , cubierta con unos picos de merengue italiano", "tortas", "");
+const lemonpie = new Productos("lemonpie", 2500, 6, "Base de una masa fina  rellena de una crema de limon , cubierta con unos picos de merengue italiano", "tortas", "../img/lemonpie-min.png");
 
 const scones = new Productos("scon", 600, 12, "Panecillos de queso", "panaderia", "../img/scon-min.png");
 
@@ -52,7 +52,7 @@ const cinnamonRoll = new Productos("cinnamon roll", 200, 5, "Clasicos rolls de c
 
 const listadoProductos = [brownie, cheescake, rogel, lemonpie, scones, alfajorMaicena, budinZanahoria, pandulceChips, pandulceFrutosSecos, pandulceClasico, roscaPascua, roscaTrenzada, budinNuez, budinChips];
 
-for (producto of listadoProductos) {
+for (const producto of listadoProductos) {
 
     contador++;
 
@@ -63,17 +63,17 @@ alert(listaProductosMenu);
 
 let selecionCategoria = prompt("seleccione que categoria desea comprar")
 
-const listaPorCategoria = listadoProductos.filter(x => x.categoria == selecionCategoria)
+const listaPorCategoria = listadoProductos.filter(producto => producto.categoria == selecionCategoria)
 
 for (const producto of listaPorCategoria) {
 
     let card = document.createElement("article");
-    let grid = document.getElementsByClassName("grid");
+    card.classList.add("articleProductos");
+    let grid = document.getElementById("grid");
 
-    card.innerHTML = ` <article class="articleProductos">
-                        <br> <img src=${producto.imagen} alt="rogel">
+    card.innerHTML = ` <br> <img src=${producto.imagen} alt="rogel">
                        <h5> ${producto.nombre} <br> ${producto.descripcion} </h5>
-                       $ ${producto.precio}  <button> lo quiero </button>`
+                       $ ${producto.precio}  <button class ="boton"> lo quiero </button>`
 
     grid.appendChild(card);
 

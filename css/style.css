@@ -1,487 +1,622 @@
 /* ESTILOS GENERALES*/
+
 * {
-  padding: 0px;
-  margin: 0px;
-  font-family: 'IBM Plex Sans', sans-serif; }
+    padding: 0px;
+    margin: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 
 body {
-  color: #595260;
-  background-color: #fbf4f9; }
+    color: #595260;
+    background-color: #fbf4f9;
+}
+
 
 /* INDEX */
+
+
 /*BARRA DE NAV*/
+
 .header {
-  background-color: #fbf4f9;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/pexels-neosiam-592392.jpg"); }
+    background-color: #fbf4f9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/pexels-neosiam-592392.jpg");
+}
 
 .nav-item {
-  font-size: 15px;
-  margin: 0px 20px; }
+    font-size: 15px;
+    margin: 0px 20px;
+}
 
 .nav-link:hover {
-  color: #91a5c7 !important; }
+    color: #91a5c7 !important;
+}
 
 .link {
-  text-decoration: none;
-  color: #595260; }
+    text-decoration: none;
+    color: #595260;
+}
 
 .link:hover {
-  color: #FFE2E2; }
+    color: #FFE2E2;
+}
+
 
 /*CONTENIDO INDEX*/
+
 .nuestra {
-  font-family: 'Birthstone';
-  font-size: 40px;
-  font-weight: 600; }
+    font-family: 'Birthstone';
+    font-size: 40px;
+    font-weight: 600;
+}
 
 .titulo {
-  text-align: center;
-  font-size: 40px;
-  margin-top: 40px; }
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
 
 .subTitulo {
-  font-size: 17px;
-  display: inline-block;
-  position: relative; }
+    font-size: 17px;
+    display: inline-block;
+    position: relative;
+}
 
 .subTitulo::after,
 .subTitulo::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 3px;
-  background-color: currentColor;
-  top: 0.6em; }
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+}
 
 .subTitulo::before {
-  left: -320px; }
+    left: -320px;
+}
 
 .subTitulo::after {
-  right: -320px; }
+    right: -320px;
+}
 
 .imgIndex {
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  margin: 2rem;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .imgIndex img {
-  width: 50%;
-  object-fit: cover;
-  margin-left: 8px; }
+    width: 50%;
+    object-fit: cover;
+    margin-left: 8px;
+}
 
 .imgValores {
-  margin-top: 17px; }
+    margin-top: 17px;
+}
 
 .textoImagen {
-  text-align: center;
-  display: inline-block;
-  margin: 0px 2px 16px 2px;
-  font-size: 13px; }
+    text-align: center;
+    display: inline-block;
+    margin: 0px 2px 16px 2px;
+    font-size: 13px;
+}
 
 .h5 {
-  font-family: 'Birthstone';
-  margin: 10px 0px;
-  font-weight: 600; }
+    font-family: 'Birthstone';
+    margin: 10px 0px;
+    font-weight: 600;
+}
 
 .div {
-  display: flex;
-  background-color: #ffe2e293;
-  justify-content: center;
-  flex-wrap: wrap; }
+    display: flex;
+    background-color: #ffe2e293;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .imgValores img {
-  width: 125px;
-  height: 125px;
-  object-fit: cover;
-  display: block;
-  margin: auto; }
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
 
 .textValores {
-  text-align: center;
-  font-size: 17px;
-  margin: 11px;
-  font-family: 'Birthstone';
-  font-weight: 600; }
+    text-align: center;
+    font-size: 17px;
+    margin: 11px;
+    font-family: 'Birthstone';
+    font-weight: 600;
+}
 
 .volver {
-  text-align: right; }
+    text-align: right;
+}
+
 
 /*FOOTER*/
+
 footer {
-  background-color: #B9CCED;
-  padding: 2rem 1rem; }
+    background-color: #B9CCED;
+    padding: 2rem 1rem;
+}
 
 i {
-  font-size: 1.5rem;
-  color: black; }
+    font-size: 1.5rem;
+    color: black;
+}
 
 .row {
-  justify-content: center; }
+    justify-content: center;
+}
 
 .iconos {
-  margin-top: 10px; }
+    margin-top: 10px;
+}
 
 .derechos {
-  padding-top: 10px;
-  border-top: solid 1px black; }
+    padding-top: 10px;
+    border-top: solid 1px black;
+}
 
 .derechos h4 {
-  font-size: small;
-  text-align: center; }
+    font-size: small;
+    text-align: center;
+}
+
 
 /* NOSOTROS */
+
 .contenidoNosotros {
-  text-align: center;
-  border: 1px solid black;
-  width: 80%; }
+    text-align: center;
+    border: 1px solid black;
+    width: 80%;
+}
 
 .divNosotros img {
-  margin-bottom: 20px; }
+    margin-bottom: 20px;
+}
 
 .divNosotros {
-  text-align: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
-
-.imgNosotros {
-  width: 300px; }
-
-.nosotrosTitulo {
-  font-size: 40px;
-  margin: 20px 20px 20px;
-  font-family: 'Birthstone', cursive;
-  text-align: center;
-  font-weight: 600; }
-
-.frase {
-  font-size: 30px;
-  text-align: center;
-  font-family: 'Birthstone', cursive; }
-
-/*RECETAS*/
-.d-md-block {
-  display: block !important;
-  background: rgba(226, 172, 210, 0.329); }
-
-.h1Recetas {
-  font-size: 38px;
-  font-weight: 600;
-  text-align: center;
-  font-family: 'Birthstone', cursive;
-  padding: 20px; }
-
-.h4 {
-  font-size: 30px;
-  font-family: 'Birthstone', cursive;
-  font-weight: 600; }
-
-.caja {
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  padding: 20px;
-  margin: 2rem;
-  flex-direction: column;
-  align-items: center; }
-
-.caja img {
-  width: 250px;
-  border-radius: 5px; }
-
-/* CONTACTANOS*/
-h2 {
-  font-size: 50px;
-  font-weight: 600;
-  margin: 20px 20px 10px;
-  font-family: 'Birthstone', cursive;
-  text-align: center; }
-
-fieldset {
-  background-color: #ffe2e293;
-  border: 1px solid #ffe2e293;
-  border-style: revert; }
-
-fieldset {
-  height: 100%;
-  width: 80%; }
-
-input {
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 18px;
-  font-family: 'Birthstone', cursive; }
-
-.formulario {
-  text-align: center;
-  display: flex;
-  justify-content: center; }
-
-.boton {
-  border-color: #B9CCED;
-  background-color: #B9CCED;
-  border-radius: 0.2rem;
-  font-size: 1 rem;
-  margin-bottom: 10px;
-  transition: ease 3s;
-  font-family: 'Birthstone', cursive; }
-
-#li {
-  padding-left: 10px; }
-
-/*  PRODUCTOS*/
-.buscar {
-  position: absolute;
-  width: 100px;
-  left: 85%;
-  top: 4%; }
-
-.box {
-  position: absolute;
-  padding: 20px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-input.src {
-  padding: 3px 7px 3px 30px;
-  outline: none;
-  font-size: 18px;
-  border-radius: 17px;
-  color: #595260;
-  margin: 5px 9px;
-  background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") no-repeat 9px center;
-  width: 96px;
-  transition: all .5s; }
-
-input.src:hover {
-  width: 220px;
-  background-color: #fff;
-  box-shadow: 0 0 5px; }
-
-.volver {
-  text-decoration: none;
-  text-align: right; }
-
-.sectionProductos {
-  display: grid; }
-
-.articleProductos h5 {
-  font-weight: 900;
-  margin-top: 20px;
-  font-size: 14px; }
-
-.articleProductos img {
-  margin: 10px; }
-
-.grid {
-  display: grid;
-  grid-template-rows: auto;
-  gap: 2em;
-  margin: 2em; }
-
-.articleProductos {
-  padding: 1px;
-  background: white;
-  border-radius: 15px;
-  text-align: center;
-  padding: 10px;
-  transition: ease .5s; }
-
-.articleProductos:hover {
-  border: transparent solid 1px;
-  transform: scale(1.05); }
-
-.carrito {
-  background-color: #B9CCED;
-  border-radius: 3px;
-  border: solid #B9CCED;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer; }
-
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-  /*INDEX*/
-  .nav-item {
-    font-size: 20px; }
-  /*CONTENIDO INDEX*/
-  .nuestra {
-    font-size: 70px; }
-  .subTitulo {
-    font-size: 30px; }
-  .imgIndex {
-    height: 430px; }
-  .divIndex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
-  .imgIndex img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    margin-top: 20px; }
-  .h5 {
-    font-size: 29px; }
-  .textoImagen {
-    width: 300px;
-    font-size: 15px; }
-  .divIndex {
-    display: flex;
-    justify-content: center; }
-  .div {
-    background-color: #fbf4f9;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 50px; }
-  .imgValores img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover; }
-  .textValores {
-    text-align: center;
-    font-size: 32px; }
-  /*CONTACTANOS*/
-  fieldset {
-    width: 74%; }
-  input {
-    font-size: 28px; }
-  h2 {
-    font-size: 70px; }
-  textarea {
-    width: 400px;
-    height: 300px; }
-  .boton {
-    font-size: 30px; }
-  /*NOSOTROS*/
-  .nosotrosTitulo {
-    font-size: 70px; }
-  .contenidoNosotros {
-    width: 85%;
-    padding: 20px; }
-  .frase {
-    font-size: 60px; }
-  /*PRODUCTOS*/
-  .grid {
-    grid-template-columns: repeat(2, 1fr); }
-  /*RECETAS*/
-  .h1Recetas {
-    font-size: 60px; }
-  .caja img {
-    width: 400px; }
-  /*FOOTER*/
-  .derechos h4 {
-    display: flex;
-    justify-content: center; }
-  .derechos h4 {
-    font-size: medium; } }
-
-@media (min-width: 1024px) {
-  /*  INDEX */
-  .header {
-    height: 150px; }
-  .nav-item {
-    font-size: 25px; }
-  /*CONTENIDO INDEX*/
-  .nuestra {
-    font-size: 100px; }
-  .titulo {
-    font-size: 100px; }
-  .subTitulo {
-    font-size: 34px; }
-  .imgIndex {
-    height: 515px; }
-  .imgIndex img {
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
-    margin-top: 20px; }
-  .h5 {
-    font-size: 35px; }
-  .textoImagen {
-    width: 300px;
-    font-size: 18px; }
-  .divIndex {
-    display: flex;
-    justify-content: center; }
-  .div {
-    background-color: #fbf4f9;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 50px; }
-  .imgValores img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover; }
-  .textValores {
-    text-align: center;
-    font-size: 40px; }
-  /* CONTACTANOS*/
-  h2 {
-    font-size: 30px; }
-  fieldset {
-    width: 40%; }
-  /*NOSOTROS */
-  .imgNosotros {
-    display: inline; }
-  .contenidoNosotros {
-    text-align: center;
-    font-size: 25px;
-    border: 1px solid black;
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px 15px 100px 15px; }
-  .divNosotros {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around; }
-  .divNosotros img {
-    width: 500px;
-    height: 699px; }
-  .nosotrosTitulo {
-    font-size: 80px; }
-  .frase {
-    font-size: 70px; }
-  /*CONTACTANOS*/
-  input {
-    font-size: 28px; }
-  h2 {
-    font-size: 70px; }
-  textarea {
-    width: 400px;
-    height: 300px; }
-  .boton {
-    font-size: 30px; }
-  /*RECETAS*/
-  .h1Recetas {
-    font-size: 80px; }
-  h4 {
-    font-size: 50px; }
-  .caja h4 {
-    margin-top: 20px; }
-  .caja img {
-    width: 700px; }
-  .w-100 {
-    height: 680px;
-    margin: auto; }
-  /* PRODUCTOS*/
-  .grid {
-    grid-template-columns: repeat(3, 1fr); }
-  /*FOOTER*/
-  .derechos h4 {
+    justify-content: center;
+}
+
+.imgNosotros {
+    width: 300px;
+}
+
+.nosotrosTitulo {
+    font-size: 40px;
+    margin: 20px 20px 20px;
+    font-family: 'Birthstone', cursive;
+    text-align: center;
+    font-weight: 600;
+}
+
+.frase {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Birthstone', cursive;
+}
+
+
+/*RECETAS*/
+
+.d-md-block {
+    display: block !important;
+    background: rgba(226, 172, 210, 0.329);
+}
+
+.h1Recetas {
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Birthstone', cursive;
+    padding: 20px;
+}
+
+.h4 {
+    font-size: 30px;
+    font-family: 'Birthstone', cursive;
+    font-weight: 600;
+}
+
+.caja {
+    background-color: white;
+    border-radius: 10px;
     display: flex;
-    justify-content: center; }
-  .derechos h4 {
-    font-size: large; } }
+    padding: 20px;
+    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caja img {
+    width: 250px;
+    border-radius: 5px;
+}
+
+
+/* CONTACTANOS*/
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 20px 10px;
+    font-family: 'Birthstone', cursive;
+    text-align: center;
+}
+
+fieldset {
+    background-color: #ffe2e293;
+    border: 1px solid #ffe2e293;
+    border-style: revert;
+}
+
+fieldset {
+    height: 100%;
+    width: 80%;
+}
+
+input {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Birthstone', cursive;
+}
+
+.formulario {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    border-color: #B9CCED;
+    background-color: #B9CCED;
+    border-radius: 0.2rem;
+    font-size: 1 rem;
+    margin-bottom: 10px;
+    transition: ease 3s;
+    font-family: 'Birthstone', cursive;
+}
+
+#li {
+    padding-left: 10px;
+}
+
+
+/*  PRODUCTOS*/
+
+.buscar {
+    position: absolute;
+    width: 100px;
+    left: 85%;
+    top: 4%;
+}
+
+.box {
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input.src {
+    padding: 3px 7px 3px 30px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 17px;
+    color: #595260;
+    margin: 5px 9px;
+    background: #fff url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") no-repeat 9px center;
+    width: 96px;
+    transition: all .5s;
+}
+
+input.src:hover {
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0 0 5px;
+}
+
+.volver {
+    text-decoration: none;
+    text-align: right;
+}
+
+.sectionProductos {
+    display: grid;
+}
+
+.articleProductos h5 {
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.articleProductos img {
+    margin: 10px;
+}
+
+#grid {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2em;
+    margin: 2em;
+}
+
+.articleProductos {
+    padding: 1px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    transition: ease .5s;
+}
+
+.articleProductos:hover {
+    border: transparent solid 1px;
+    transform: scale(1.05);
+}
+
+.carrito {
+    background-color: #B9CCED;
+    border-radius: 3px;
+    border: solid #B9CCED;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    /*INDEX*/
+    .nav-item {
+        font-size: 20px;
+    }
+    /*CONTENIDO INDEX*/
+    .nuestra {
+        font-size: 70px;
+    }
+    .subTitulo {
+        font-size: 30px;
+    }
+    .imgIndex {
+        height: 430px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .imgIndex img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .h5 {
+        font-size: 29px;
+    }
+    .textoImagen {
+        width: 300px;
+        font-size: 15px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+    }
+    .div {
+        background-color: #fbf4f9;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .imgValores img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .textValores {
+        text-align: center;
+        font-size: 32px;
+    }
+    /*CONTACTANOS*/
+    fieldset {
+        width: 74%;
+    }
+    input {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    textarea {
+        width: 400px;
+        height: 300px;
+    }
+    .boton {
+        font-size: 30px;
+    }
+    /*NOSOTROS*/
+    .nosotrosTitulo {
+        font-size: 70px;
+    }
+    .contenidoNosotros {
+        width: 85%;
+        padding: 20px;
+    }
+    .frase {
+        font-size: 60px;
+    }
+    /*PRODUCTOS*/
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /*RECETAS*/
+    .h1Recetas {
+        font-size: 60px;
+    }
+    .caja img {
+        width: 400px;
+    }
+    /*FOOTER*/
+    .derechos h4 {
+        display: flex;
+        justify-content: center;
+    }
+    .derechos h4 {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*  INDEX */
+    .header {
+        height: 150px;
+    }
+    .nav-item {
+        font-size: 25px;
+    }
+    /*CONTENIDO INDEX*/
+    .nuestra {
+        font-size: 100px;
+    }
+    .titulo {
+        font-size: 100px;
+    }
+    .subTitulo {
+        font-size: 34px;
+    }
+    .imgIndex {
+        height: 515px;
+    }
+    .imgIndex img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .h5 {
+        font-size: 35px;
+    }
+    .textoImagen {
+        width: 300px;
+        font-size: 18px;
+    }
+    .divIndex {
+        display: flex;
+        justify-content: center;
+    }
+    .div {
+        background-color: #fbf4f9;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .imgValores img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .textValores {
+        text-align: center;
+        font-size: 40px;
+    }
+    /* CONTACTANOS*/
+    h2 {
+        font-size: 30px;
+    }
+    fieldset {
+        width: 40%;
+    }
+    /*NOSOTROS */
+    .imgNosotros {
+        display: inline;
+    }
+    .contenidoNosotros {
+        text-align: center;
+        font-size: 25px;
+        border: 1px solid black;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 15px 100px 15px;
+    }
+    .divNosotros {
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .divNosotros img {
+        width: 500px;
+        height: 699px;
+    }
+    .nosotrosTitulo {
+        font-size: 80px;
+    }
+    .frase {
+        font-size: 70px;
+    }
+    /*CONTACTANOS*/
+    input {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+    textarea {
+        width: 400px;
+        height: 300px;
+    }
+    .boton {
+        font-size: 30px;
+    }
+    /*RECETAS*/
+    .h1Recetas {
+        font-size: 80px;
+    }
+    h4 {
+        font-size: 50px;
+    }
+    .caja h4 {
+        margin-top: 20px;
+    }
+    .caja img {
+        width: 700px;
+    }
+    .w-100 {
+        height: 680px;
+        margin: auto;
+    }
+    /* PRODUCTOS*/
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /*FOOTER*/
+    .derechos h4 {
+        display: flex;
+        justify-content: center;
+    }
+    .derechos h4 {
+        font-size: large;
+    }
+}
