@@ -466,7 +466,7 @@ input.src:hover {
         font-size: 60px;
     }
     /*PRODUCTOS*/
-    .grid {
+    #grid {
         grid-template-columns: repeat(2, 1fr);
     }
     /*RECETAS*/
@@ -608,7 +608,7 @@ input.src:hover {
         margin: auto;
     }
     /* PRODUCTOS*/
-    .grid {
+    #grid {
         grid-template-columns: repeat(3, 1fr);
     }
     /*FOOTER*/
