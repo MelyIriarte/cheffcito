@@ -59,34 +59,82 @@ for (const producto of listadoProductos) {
     listaProductosMenu += "\n" + contador + "- " + producto.nombre;
 }
 
-alert(listaProductosMenu);
+//alert(listaProductosMenu);
 
-let selecionCategoria = prompt("seleccione que categoria desea comprar")
 
-const listaPorCategoria = listadoProductos.filter(producto => producto.categoria == selecionCategoria)
+let repeticion = 0;
+let categoriaTortas = document.querySelector(".categoriaTortas");
+let categoriaPanaderia = document.querySelector(".categoriaPanaderia");
+let categoriaProductosFestivos = document.querySelector(".categoriaProductosFestivos");
 
-for (const producto of listaPorCategoria) {
 
-    let card = document.createElement("article");
-    card.classList.add("articleProductos");
-    let grid = document.getElementById("grid");
 
-    card.innerHTML = ` <br> <img src=${producto.imagen} alt="rogel">
-                       <h5> ${producto.nombre} <br> ${producto.descripcion} </h5>
-                       $ ${producto.precio}  <button class ="boton"> lo quiero </button>`
+categoriaTortas.addEventListener("click", function() { renderProductos("tortas") });
+categoriaPanaderia.addEventListener("click", function() { renderProductos("panaderia") });
+categoriaProductosFestivos.addEventListener("click", function() { renderProductos("productos festivos") });
 
-    grid.appendChild(card);
+function renderProductos(categoria) {
 
+    const listaPorCategoria = listadoProductos.filter(producto => producto.categoria == categoria);
+
+    grid.innerHTML = "";
+
+    for (const producto of listaPorCategoria) {
+
+        let card = document.createElement("article");
+        card.classList.add("articleProductos");
+        let grid = document.getElementById("grid");
+
+        card.innerHTML = ` <br> <img src=${producto.imagen} alt="rogel">
+                           <h5> ${producto.nombre} <br> ${producto.descripcion} </h5>
+                           $ ${producto.precio}  <button class ="boton"> lo quiero </button>`
+
+        grid.appendChild(card);
+
+    }
 }
 
+function mostrarPanaderia() {
+    const listaPorCategoria = listadoProductos.filter(producto => producto.categoria == "panaderia")
+
+    for (const producto of listaPorCategoria) {
+
+        let card = document.createElement("article");
+        card.classList.add("articleProductos");
+        let grid = document.getElementById("grid");
+
+        card.innerHTML = ` <br> <img src=${producto.imagen} alt="rogel">
+                           <h5> ${producto.nombre} <br> ${producto.descripcion} </h5>
+                           $ ${producto.precio}  <button class ="boton"> lo quiero </button>`
+
+        grid.appendChild(card);
+
+    }
+}
+
+function mostrarProductosFestivos() {
+    const listaPorCategoria = listadoProductos.filter(producto => producto.categoria == "productos festivos")
+
+    for (const producto of listaPorCategoria) {
+
+        let card = document.createElement("article");
+        card.classList.add("articleProductos");
+        let grid = document.getElementById("grid");
+
+        card.innerHTML = ` <br> <img src=${producto.imagen} alt="rogel">
+                           <h5> ${producto.nombre} <br> ${producto.descripcion} </h5>
+                           $ ${producto.precio}  <button class ="boton"> lo quiero </button>`
+
+        grid.appendChild(card);
+
+    }
+}
 /* 
 function stockInsuficiente(producto) {
     alert("no tenemos suficiente stock de " + producto);
 }
-
 function compra(producto) {
     cantidadComprada = parseInt(prompt("Cuantos quiere:"));
-
     if (producto.stock >= cantidadComprada) {
         producto.stockActual(cantidadComprada);
         total += producto.precio * cantidadComprada;
@@ -95,19 +143,14 @@ function compra(producto) {
     }
 }
 let cantidadProductos = parseInt(prompt("Ingrese la cantidad de productos a COMPRAR"));
-
 for (let i = 0; i < cantidadProductos; i++) {
-
     let productoAcomprar = prompt("¿Que producto quiere comprar?");
     productoAcomprar = productoAcomprar.toLowerCase();
-
     const listadoFiltrado = listadoProductos.find(el => el.nombre === productoAcomprar);
-
     if (listadoFiltrado) {
         compra(listadoFiltrado);
     } else { 
         alert("No tenemos ese producto"); 
     }
-
 }
 alert("Usted tiene que pagar $" + total); */
