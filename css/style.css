@@ -467,7 +467,7 @@ input.src:hover {
     }
     /*PRODUCTOS*/
     #grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     /*RECETAS*/
     .h1Recetas {
@@ -609,7 +609,7 @@ input.src:hover {
     }
     /* PRODUCTOS*/
     #grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     /*FOOTER*/
     .derechos h4 {
