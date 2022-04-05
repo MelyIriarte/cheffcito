@@ -285,7 +285,8 @@ input {
     justify-content: center;
 }
 
-.boton {
+
+/* .boton {
     border-color: #B9CCED;
     background-color: #B9CCED;
     border-radius: 0.2rem;
@@ -293,7 +294,7 @@ input {
     margin-bottom: 10px;
     transition: ease 3s;
     font-family: 'Birthstone', cursive;
-}
+} */
 
 #li {
     padding-left: 10px;
@@ -382,6 +383,83 @@ input.src:hover {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+/*carrito*/
+
+ul {
+    list-style: none;
+}
+
+.submenu {
+    position: relative;
+    text-align: right;
+    margin: 20px;
+    list-style: none;
+}
+
+.submenu #contenedorCarrito {
+    display: none;
+}
+
+.submenu:hover #contenedorCarrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: #FFE2E2;
+    padding: 20px;
+}
+
+.vacio {
+    padding: 10px;
+    background-color: #B9CCED;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.agregar-carrito {
+    margin: 10px 0;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #1d2124;
+}
+
+.botonB {
+    border-color: #B9CCED;
+    background-color: #B9CCED;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-family: 'Birthstone', cursive;
+    padding: 9px 12px;
+    text-align: center;
+    color: #293141;
+}
+
+.boton {
+    border-color: #B9CCED;
+    background-color: #B9CCED;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-family: 'Birthstone', cursive;
+    padding: 9px 12px;
+    text-align: center;
+    color: #293141;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #FFE2E2;
+    border-color: #B9CCED;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1023px) {

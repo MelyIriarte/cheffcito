@@ -1,138 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //VARIABLES
-    let baseDeDatos = [];
 
-    let cantidadComprada;
-    let total = 0;
+    //VARIABLES
     let carrito = [];
     const divisa = "$";
-    const DOMgrid = document.getElementById("grid");
-    const DOMcarrito = document.querySelector("#carrito");
-    const DOMtotal = document.querySelector("#total");
-    const DOMbotonVaciar = document.querySelector("#boton-vaciar");
-    const DOMbotonComprar = document.querySelector("#boton-comprar");
     const miLocalStorage = window.localStorage;
-    let repeticion = 0;
-    let categoriaTortas = document.querySelector(".categoriaTortas");
-    let categoriaPanaderia = document.querySelector(".categoriaPanaderia");
-    let categoriaProductosFestivos = document.querySelector(".categoriaProductosFestivos");
 
-    //PRODUCTOS
-    const listadoProductos = [{
-            id: 1,
-            imagen: "../img/brownie-min.png",
-            nombre: "brownie",
-            descripcion: "Base de nuestro brownie de chocolate con una capa de dulce de leche y copos de merengue Italiano.",
-            precio: 200,
-            categoria: "tortas"
-        },
-        {
-            id: 2,
-            imagen: "../img/chescake-min.png",
-            nombre: "cheescake",
-            descripcion: " Base de galletitas trituradas con una crema de queso, terminada con una deliciosa jalea de frutos rojos.",
-            precio: 3000,
-            categoria: "tortas"
-        },
-        {
-            id: 3,
-            imagen: "../img/rogel-min.png",
-            nombre: "rogel",
-            descripcion: " Masas fina de galeta muy crocante intercaladas con dulce de leche terminada con pico altos de meregue Italiano.",
-            precio: 2200,
-            categoria: "tortas"
-
-        },
-        {
-            id: 4,
-            imagen: "../img/lemonpie-min.png",
-            nombre: "lemonpie",
-            descripcion: "Base de una masa fina  rellena de una crema de limon , cubierta con unos picos de merengue italiano",
-            precio: 2500,
-            categoria: "tortas"
-        },
-        {
-            id: 5,
-            imagen: "../img/scon-min.png",
-            nombre: "scon",
-            descripcion: "Panecillos de queso",
-            precio: 600,
-            categoria: "panaderia"
-        },
-        {
-            id: 6,
-            imagen: "../img/alfajorcito-min.png",
-            nombre: "alfajores de maicena",
-            descripcion: " Masa quebrada, super suave rellena con dulce de leche, con coco al rededor.",
-            precio: 600,
-            categoria: "panaderia"
-        },
-        {
-            id: 7,
-            imagen: "../img/budin-min.png",
-            nombre: "budin de zanahoria",
-            descripcion: "Budin de zanahoria con glaseado y decoracion de zanahoria en pasta ballina.",
-            precio: 1000,
-            categoria: "panaderia"
-        }, {
-            id: 8,
-            imagen: "",
-            nombre: "pandulce de chips",
-            descripcion: "Nuestros pandulces estan elaborados un una masa exquisita y mega esponjosa, con gran cantidad de chips,cubiertos con un glaseado de limon ",
-            precio: 1200,
-            categoria: "productos festivos"
-        }, {
-            id: 9,
-            imagen: "../img/pandulce.png",
-            nombre: "pandulce de frutos secos",
-            descripcion: "Nuestros pandulces estan elaborados un una masa exquisita y mega esponjosa, con gran cantidad de frutos secos ,cubiertos con frutos secos caramelizados ",
-            precio: 1500,
-            categoria: "productos festivos"
-        }, {
-            id: 10,
-            imagen: "",
-            nombre: "pandulce clasico ",
-            descripcion: "Nuestros pandulces estan elaborados un una masa exquisita y mega esponjosa, con gran cantidas de frutas seca y abrillantadas ,cubiertos con frutos caramelizados ",
-            precio: 1200,
-            categoria: "productos festivos"
-        }, {
-            id: 11,
-            imagen: "",
-            nombre: "rosca de pascuas",
-            descripcion: "Rosca clasica decorada con crema pastelera, cerezas e higos",
-            precio: 1100,
-            categoria: "productos festivos"
-        }, {
-            id: 12,
-            imagen: "../img/brownie-min.png",
-            nombre: "rosca trenzada",
-            descripcion: "La masa clasica de la rosca trenzada con crema pastelera y trozos de chocolate ",
-            precio: 1100,
-            categoria: "productos festivos"
-        }, {
-            id: 13,
-            imagen: "",
-            nombre: " budin de nuez",
-            descripcion: "Budin de nuez, decorado con un glaseado de limon ",
-            precio: 1050,
-            categoria: "panaderia"
-        }, {
-            id: 14,
-            imagen: "",
-            nombre: "budin de chips",
-            descripcion: "Budin de chips, decorado con un glaseado de limon ",
-            precio: 900,
-            categoria: "panaderia"
-        }, {
-            id: 15,
-            imagen: "../img/cinnamonroll-min.png",
-            nombre: "cinnamon roll",
-            descripcion: "Clasicos rolls de canella y azucar negra , cubiertos con un glasse con nueces ",
-            precio: 200,
-            categoria: "panaderia"
-        }
-
-    ]
+    let listadoProductos = [];
+    fetch("../data.json")
+        .then((resp) => resp.json())
+        .then((data) => {
+            listadoProductos = data;
+            renderizarProductos();
+        });
 
     //BUSCADOR
     const input1 = document.querySelector("#busqueda");
@@ -141,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buscar() {
         const texto = input1.value.toLowerCase();
-
         contenedorBusqueda = document.querySelector("#grid");
         contenedorBusqueda.innerHTML = '';
+
         for (let producto of listadoProductos) {
             let nombre = producto.nombre.toLowerCase();
             if (nombre.indexOf(texto) != -1) {
@@ -151,89 +30,98 @@ document.addEventListener('DOMContentLoaded', () => {
                 contenedorProducto.classList.add("articleProductos")
                 contenedorProducto.innerHTML = `
                                                     <img src ="${producto.imagen}"/>
-                                                    <h3>${producto.nombre}</h3>
+                                                    <h5>${producto.nombre}</h5>
                                                     <p> ${producto.descripcion}</p>
-                                                    <b> $ ${producto.precio}</b>
+                                                    <p> $ ${producto.precio}</p>
                                                    `
-                    //Línea por si quiero agregar imagen a la card<img src ="${servicio.imagen}"/>
-                    /*  const miNodoBoton = document.createElement('button');
-                     miNodoBoton.classList.add('btn', 'btn-primary', 'boton--verde');
-                     miNodoBoton.textContent = 'Solicitar';
-                     miNodoBoton.setAttribute('marcador', producto.id);
-                     miNodoBoton.setAttribute("id", "boton-solicitar");
-                     miNodoBoton.addEventListener('click', añadirProductoAlCarrito);
-                     contenedorBusqueda.appendChild(contenedorProducto);
-                     contenedorBusqueda.appendChild(miNodoBoton); */
-
                 const cardBoton = document.createElement("button");
                 cardBoton.classList.add("boton");
-                cardBoton.textContent = "agregar";
+                cardBoton.textContent = "Agregar";
                 cardBoton.setAttribute("marcador", producto.id);
-                cardBoton.addEventListener("click", añadirProductoAlCarrito);
+                cardBoton.addEventListener("click", ayadirProductoAlCarrito);
                 contenedorProducto.appendChild(cardBoton);
                 contenedorBusqueda.appendChild(contenedorProducto);
-
             }
         }
     }
 
     //FUNCION QUE CREA LAS CARDS
+    const domGrid = document.getElementById("grid");
+
     function renderizarProductos() {
+
         listadoProductos.forEach((info) => {
-            //Estructura 
+
             const card = document.createElement("article");
             card.classList.add("articleProductos");
-            //img
+
             const cardImg = document.createElement("img");
             cardImg.setAttribute("src", `${info.imagen}`);
-            //nombre
+
             const cardNombre = document.createElement("h5");
             cardNombre.textContent = `${info.nombre}`;
-            //descripcion
+
             const cardDescripcion = document.createElement("p");
             cardDescripcion.textContent = info.descripcion;
-            // precio
-            const cardPrecio = document.createElement("b");
+
+            const cardPrecio = document.createElement("p");
             cardPrecio.textContent = `$ ${info.precio}`;
-            //boton
+
             const cardBoton = document.createElement("button");
             cardBoton.classList.add("boton");
-            cardBoton.textContent = "agregar";
+            cardBoton.textContent = "Agregar";
             cardBoton.setAttribute("marcador", info.id);
-            cardBoton.addEventListener("click", añadirProductoAlCarrito);
+            cardBoton.addEventListener("click", ayadirProductoAlCarrito);
             // armado de card
             card.appendChild(cardImg);
             card.appendChild(cardNombre);
             card.appendChild(cardDescripcion);
             card.appendChild(cardPrecio);
             card.appendChild(cardBoton);
-            DOMgrid.appendChild(card);
-
+            domGrid.appendChild(card);
         });
     }
 
     // añadir al carrito un producto, actualiza y guarda en el localstorage
-    function añadirProductoAlCarrito(e) {
+    function ayadirProductoAlCarrito(e) {
+
         carrito.push(e.target.getAttribute("marcador"));
         renderizarCarrito();
         guardarCarritoEnLocalStorage();
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "bottom-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        Toast.fire({
+            icon: 'success',
+            title: 'Su producto se añadio al carrito'
+        })
     }
+
     // muestra los productos guardados en el carrito
-    function renderizarCarrito() { //vacia todo el html
+    const domCarrito = document.querySelector("#carrito");
+    const domTotal = document.querySelector("#total");
 
-        DOMcarrito.textContent = "";
+    function renderizarCarrito() {
 
+        domCarrito.textContent = "";
         console.log(carrito);
-
         const carritoSinDuplicados = [...new Set(carrito)];
 
         carritoSinDuplicados.forEach((item) => {
             const miItem = listadoProductos.filter((itemBaseDatos) => {
                 return itemBaseDatos.id === parseInt(item);
             });
-
             const numeroDeVecesAcomprar = carrito.reduce((total, itemId) => {
-                return itemId === item ? total += 1 : total;
+                return itemId === item ? total += 1 : total; /* use operador ternario*/
             }, 0);
 
             const miNodo = document.createElement("li");
@@ -249,24 +137,23 @@ document.addEventListener('DOMContentLoaded', () => {
             miBoton.addEventListener('click', borrarItemCarrito);
 
             miNodo.appendChild(miBoton);
-            DOMcarrito.appendChild(miNodo);
+            domCarrito.appendChild(miNodo);
         })
 
-        DOMtotal.textContent = calcularTotal();
+        domTotal.textContent = calcularTotal();
     }
 
     //borra un elemento del carrito
     function borrarItemCarrito(e) {
-        //obtenemos el producto por su id
+
         const id = e.target.dataset.item;
-        //borra todos los productos
+
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
 
         renderizarCarrito();
         guardarCarritoEnLocalStorage();
-
     }
 
     //calcula el precio precio total
@@ -287,16 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         localStorage.clear();
 
-
         Swal.fire({
             title: '¿Esta seguro de querer vaciar este carrito?',
             showDenyButton: true,
             confirmButtonText: `Continuar comprando`,
             denyButtonText: 'Vaciar',
         }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
             if (result.isDenied) {
-                Swal.fire('Borrado', '', 'success')
+                Swal.fire('Carrito vacio', '', 'success')
             }
         })
     }
@@ -306,12 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         localStorage.clear();
 
-
-
         Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Compra realizada',
+            title: 'Compra realizada con exito.',
             showConfirmButton: false,
             timer: 1500
         })
@@ -322,27 +205,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function cargarCarritoDeLocalStorage() {
-
         if (miLocalStorage.getItem('carrito') !== null) {
-            // Carga la información al localstorage
             carrito = JSON.parse(miLocalStorage.getItem('carrito'));
         }
     }
 
-    // EVENTOS
-    DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-    DOMbotonComprar.addEventListener("click", comprarCarrito);
-    //btn categorias
+    const domBotonVaciar = document.querySelector("#boton-vaciar");
+    const domBotonComprar = document.querySelector("#boton-comprar");
 
-    categoriaTortas.addEventListener("click", function() { renderProductos("tortas") });
-    categoriaPanaderia.addEventListener("click", function() { renderProductos("panaderia") });
-    categoriaProductosFestivos.addEventListener("click", function() { renderProductos("productos festivos") });
+    domBotonVaciar.addEventListener('click', vaciarCarrito);
+    domBotonComprar.addEventListener("click", comprarCarrito);
 
-
-
-    // INICIALIZACION
     cargarCarritoDeLocalStorage();
     renderizarProductos();
     renderizarCarrito();
-
 });
