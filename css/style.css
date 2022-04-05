@@ -348,7 +348,7 @@ input.src:hover {
 .articleProductos h5 {
     font-weight: 900;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .articleProductos img {
@@ -554,6 +554,9 @@ ul {
     .caja img {
         width: 400px;
     }
+    .boton {
+        font-size: 28px;
+    }
     /*FOOTER*/
     .derechos h4 {
         display: flex;
@@ -688,6 +691,9 @@ ul {
     /* PRODUCTOS*/
     #grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .boton {
+        font-size: 18px;
     }
     /*FOOTER*/
     .derechos h4 {
